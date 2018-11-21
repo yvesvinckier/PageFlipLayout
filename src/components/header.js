@@ -1,33 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = () => (
+  <header className="codrops-header">
+    <h1 className="codrops-header__title">Page Flip Layout</h1>
+    <div className="codrops-header__links">
+      <a href="https://tympanus.net/Development/AnimatedGridPreviews/" title="Previous Demo">Previous demo</a>
+      <a href="https://tympanus.net/codrops/?p=36406" title="Back to the article">Article</a>
+      <a href="https://github.com/codrops/PageFlipLayout/" title="Find this project on GitHub">GitHub</a>
     </div>
-  </div>
+  </header>
 )
 
 export default Header
