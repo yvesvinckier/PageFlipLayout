@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { TimelineMax } from 'gsap/all'
 
 import Header from '../components/header'
 
@@ -24,8 +25,10 @@ import Img17 from '../assets/images/17.jpg'
 class Slideshow extends Component {
   constructor(props) {
     super(props)
+    this.tl = null
     this.state = {
-      current: 2,
+      current: 1,
+      items: [],
     }
   }
   componentDidMount() {
@@ -38,6 +41,15 @@ class Slideshow extends Component {
     // console.log(slide[0])
     // Set the first slide as current.
     slide[this.state.current].classList.add('slide--current')
+  }
+  showItems = () => {
+    const NodeListItems = document.querySelectorAll('.slide__figure')
+    const items = Array.from(NodeListItems)
+    const item = items.map(item => item)
+    this.tl = new TimelineMax()
+    for (const item of this.items) {
+      // Animate the main element (translation of the whole item).
+    }
   }
 
   render() {
